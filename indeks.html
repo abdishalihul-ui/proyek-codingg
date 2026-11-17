@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kopi Senja & Rasa — Kedai Kopi Artisan</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navigasi -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#" class="logo">☕ Kopi Senja & Rasa</a>
+      <ul class="nav-links">
+        <li><a href="#tentang">Cerita Kami</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#lokasi">Lokasi</a></li>
+      </ul>
+      <button id="cart-btn" class="cart-btn">
+        🛒 Keranjang (<span id="cart-count">0</span>)
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="hero-content">
+      <span class="badge">Biji Kopi Pilihan Nusantara</span>
+      <h1>Hangatnya Cerita di Setiap Tegukan</h1>
+      <p>Nikmati racikan kopi artisan dari biji arabika dan robusta terbaik, diseduh sepenuh hati untuk menemani harimu.</p>
+      <a href="#menu" class="btn-primary">Lihat Menu Kami</a>
+    </div>
+  </header>
+
+  <!-- Tentang Kami -->
+  <section id="tentang" class="about-section">
+    <div class="container about-grid">
+      <div class="about-text">
+        <h2>Cerita Kami</h2>
+        <p>Berdiri sejak 2020, <strong>Kopi Senja & Rasa</strong> hadir sebagai ruang singgah yang nyaman bagi para penikmat kopi, pelajar, dan pekerja kreatif.</p>
+        <p>Kami bekerja sama langsung dengan petani kopi lokal di Jawa Timur dan Aceh untuk menghadirkan cita rasa autentik di setiap cangkir.</p>
+      </div>
+      <div class="about-highlights">
+        <div class="highlight-card">
+          <h3>100%</h3>
+          <p>Biji Kopi Segar Sangrai Lokal</p>
+        </div>
+        <div class="highlight-card">
+          <h3>15+</h3>
+          <p>Varian Minuman & Pastry</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Katalog Menu -->
+  <section id="menu" class="menu-section">
+    <div class="container">
+      <h2 class="section-title">Menu Pilihan</h2>
+      
+      <!-- Filter Kategori -->
+      <div class="filter-buttons">
+        <button class="filter-btn active" data-category="all">Semua</button>
+        <button class="filter-btn" data-category="panas">Kopi Panas</button>
+        <button class="filter-btn" data-category="dingin">Kopi Dingin</button>
+        <button class="filter-btn" data-category="non-kopi">Non-Kopi</button>
+        <button class="filter-btn" data-category="pastry">Pastry</button>
+      </div>
+
+      <!-- Grid Daftar Menu -->
+      <div id="menu-grid" class="menu-grid"></div>
+    </div>
+  </section>
+
+  <!-- Lokasi & Jam Buka -->
+  <footer id="lokasi" class="footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>☕ Kopi Senja & Rasa</h3>
+        <p>Jl. Tunjungan No. 45, Genteng, Surabaya, Jawa Timur</p>
+      </div>
+      <div>
+        <h4>Jam Operasional</h4>
+        <p>Senin – Jumat: 07.00 – 22.00 WIB</p>
+        <p>Sabtu – Minggu: 08.00 – 23.00 WIB</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Drawer Keranjang Belanja -->
+  <div id="cart-overlay" class="cart-overlay"></div>
+  <aside id="cart-drawer" class="cart-drawer">
+    <div class="cart-header">
+      <h3>Pesanan Anda</h3>
+      <button id="close-cart" class="close-btn">&times;</button>
+    </div>
+    <div id="cart-items" class="cart-items">
+      <p class="empty-cart">Keranjang masih kosong.</p>
+    </div>
+    <div class="cart-footer">
+      <div class="price-row">
+        <span>Subtotal</span>
+        <span id="subtotal-price">Rp 0</span>
+      </div>
+      <div class="price-row">
+        <span>Pajak (10%)</span>
+        <span id="tax-price">Rp 0</span>
+      </div>
+      <div class="price-row total">
+        <span>Total</span>
+        <span id="total-price">Rp 0</span>
+      </div>
+      <button id="checkout-btn" class="btn-primary full-width">Pesan Sekarang</button>
+    </div>
+  </aside>
+
+  <script src="script.js"></script>
+</body>
+</html>
